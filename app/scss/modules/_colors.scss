@@ -1,0 +1,9 @@
+$colors: (
+  neutral__almost-white: hsl(0, 0%, 98%),
+  neutral__medium-gray: hsl(0, 0%, 41%),
+  neutral__almost-black: hsl(0, 0%, 8%),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
