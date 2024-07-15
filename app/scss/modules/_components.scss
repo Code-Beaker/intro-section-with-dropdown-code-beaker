@@ -7,6 +7,7 @@
   outline-offset: 0.125rem;
   display: block;
   padding: 0.75rem 1rem;
+  transition: 50ms ease;
 }
 
 @mixin buttonBorder($color, $bg, $border, $weight, $size) {
@@ -20,4 +21,24 @@
   display: block;
   padding: 0.75rem 1.25rem;
   outline-offset: 0.125rem;
+  transition: 50ms ease;
+}
+
+@mixin buttonPrimary($color, $bg, $size, $weight) {
+  display: block;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  color: $color;
+  background-color: $bg;
+  font-size: $size;
+  font-weight: $weight;
+  text-decoration: none;
+  border: 0.125rem solid transparent;
+  transition: 50ms ease;
+
+  &:hover {
+    color: $bg;
+    border: 0.125rem solid $bg;
+    background-color: transparent;
+  }
 }
